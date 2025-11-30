@@ -1,9 +1,18 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Code, Smartphone, Settings, TrendingUp, Wrench, Search, ArrowRight } from "lucide-react"
-import Link from "next/link"
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  Code,
+  Smartphone,
+  Settings,
+  TrendingUp,
+  Wrench,
+  Search,
+  ArrowRight,
+} from "lucide-react";
+import Link from "next/link";
+import HeroSection from "@/components/HeroSection";
 
 export default function ServiciosPage() {
   const services = [
@@ -79,7 +88,7 @@ export default function ServiciosPage() {
         "Roadmap de implementación",
       ],
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -87,44 +96,50 @@ export default function ServiciosPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-20 md:py-32 bg-gradient-to-br from-primary/5 via-accent/5 to-background">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h1 className="text-4xl md:text-5xl font-bold text-balance">Nuestros Servicios</h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Impulsá tu negocio con soluciones digitales efectivas y escalables
-              </p>
-            </div>
-          </div>
-        </section>
+        <HeroSection
+          title="Nuestros Servicios"
+          subtitle="Impulsá tu negocio con soluciones digitales efectivas y escalables"
+        />
 
         {/* Services Grid */}
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {services.map((service, index) => {
-                const Icon = service.icon
+                const Icon = service.icon;
                 return (
-                  <Card key={index} className="border-2 hover:border-primary transition-colors">
+                  <Card
+                    key={index}
+                    className="border-2 hover:border-primary transition-colors"
+                  >
                     <CardHeader>
                       <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                         <Icon className="h-6 w-6 text-primary" />
                       </div>
-                      <CardTitle className="text-2xl">{service.title}</CardTitle>
+                      <CardTitle className="text-2xl">
+                        {service.title}
+                      </CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4">
-                      <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {service.description}
+                      </p>
                       <ul className="space-y-2">
                         {service.benefits.map((benefit, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-sm">
+                          <li
+                            key={idx}
+                            className="flex items-start gap-2 text-sm"
+                          >
                             <div className="h-1.5 w-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
-                            <span className="text-muted-foreground">{benefit}</span>
+                            <span className="text-muted-foreground">
+                              {benefit}
+                            </span>
                           </li>
                         ))}
                       </ul>
                     </CardContent>
                   </Card>
-                )
+                );
               })}
             </div>
           </div>
@@ -134,9 +149,12 @@ export default function ServiciosPage() {
         <section className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-balance">¿Necesitas una solución personalizada?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-balance">
+                ¿Necesitas una solución personalizada?
+              </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Cada proyecto es único. Contáctanos para discutir cómo podemos ayudarte a alcanzar tus objetivos.
+                Cada proyecto es único. Contáctanos para discutir cómo podemos
+                ayudarte a alcanzar tus objetivos.
               </p>
               <Link href="/contacto">
                 <Button size="lg" className="mt-4">
@@ -151,5 +169,5 @@ export default function ServiciosPage() {
 
       <Footer />
     </div>
-  )
+  );
 }
