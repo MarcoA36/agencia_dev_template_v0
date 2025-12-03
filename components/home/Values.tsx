@@ -2,7 +2,7 @@ import { Zap, Target, Users } from "lucide-react";
 
 export default function ValuesSection() {
   return (
-    <section className="py-32 md:py-40">
+    <section id="nosotros" className="py-32 md:py-40">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-20">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-balance">

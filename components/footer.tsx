@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
+import { Facebook, Twitter, Linkedin, Instagram, Phone } from "lucide-react"
 
 export function Footer() {
   return (
@@ -25,28 +25,28 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/nosotros" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link href="#nosotros" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Nosotros
                 </Link>
               </li>
               <li>
-                <Link href="/servicios" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link href="#servicios" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Servicios
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Blog
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
           <div>
             <h3 className="font-semibold mb-4">Contacto</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>contacto@devagency.com</li>
-              <li>+34 123 456 789</li>
+              {/* <li>contacto@devagency.com</li> */}
+              <li> 2284656640</li>
             </ul>
           </div>
 

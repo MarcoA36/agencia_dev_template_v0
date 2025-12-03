@@ -14,7 +14,7 @@ export default function CTASection() {
             Construyamos juntos tu próxima solución digital. Contáctanos hoy
             para una consulta gratuita.
           </p>
-          <Link href="/contacto">
+          <Link href="#contacto">
             <Button size="lg" variant="secondary" className="mt-4">
               Comenzar ahora
               <ArrowRight className="ml-2 h-4 w-4" />

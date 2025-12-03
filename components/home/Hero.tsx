@@ -155,13 +155,13 @@ export default function HeroSection() {
   </p>
 
   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-    <Link href="/contacto">
+    <Link href="#contacto">
       <Button size="lg" className="w-full sm:w-auto">
         Solicitar presupuesto <ArrowRight className="ml-2 h-4 w-4" />
       </Button>
     </Link>
 
-    <Link href="/servicios">
+    <Link href="#servicios">
       <Button
         size="lg"
         variant="outline"
