@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, Send } from "lucide-react";
+import { Phone, Send } from "lucide-react";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -22,6 +22,7 @@ export default function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
 
+    // Simulación de envío
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     setSubmitMessage("¡Gracias por tu mensaje! Te contactaremos pronto.");
@@ -41,132 +42,128 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contacto" className="py-20 md:py-32">
+    <section
+      id="contacto"
+      className="py-24 bg-gray-50 dark:bg-gray-900 transition-colors"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Título */}
-        <div className="max-w-3xl mx-auto text-center space-y-6 mb-16">
-          <h3 className="text-4xl md:text-5xl font-bold">
+        <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
+          <h3 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight">
             Construyamos juntos tu próximo proyecto digital
           </h3>
+          <p className="text-lg text-gray-600 dark:text-gray-300">
+            Rellena el formulario y nos pondremos en contacto contigo lo antes posible.
+          </p>
         </div>
 
         {/* Contenido */}
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Formulario */}
           <div>
-            <h2 className="text-2xl font-bold mb-6">Envíanos un mensaje</h2>
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-6 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700"
+            >
+              <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
+                Envíanos un mensaje
+              </h2>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="space-y-2">
-                <Label htmlFor="nombre">Nombre</Label>
-                <Input
-                  id="nombre"
-                  name="nombre"
-                  value={formData.nombre}
-                  onChange={handleChange}
-                  required
-                  placeholder="Tu nombre"
-                />
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="nombre">Nombre</Label>
+                  <Input
+                    id="nombre"
+                    name="nombre"
+                    value={formData.nombre}
+                    onChange={handleChange}
+                    required
+                    placeholder="Tu nombre"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email</Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    placeholder="tu@email.com"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="asunto">Asunto</Label>
+                  <Input
+                    id="asunto"
+                    name="asunto"
+                    value={formData.asunto}
+                    onChange={handleChange}
+                    required
+                    placeholder="¿En qué podemos ayudarte?"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="mensaje">Mensaje</Label>
+                  <Textarea
+                    id="mensaje"
+                    name="mensaje"
+                    value={formData.mensaje}
+                    onChange={handleChange}
+                    required
+                    placeholder="Cuéntanos sobre tu proyecto..."
+                    rows={6}
+                  />
+                </div>
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  placeholder="tu@email.com"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="asunto">Asunto</Label>
-                <Input
-                  id="asunto"
-                  name="asunto"
-                  value={formData.asunto}
-                  onChange={handleChange}
-                  required
-                  placeholder="¿En qué podemos ayudarte?"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="mensaje">Mensaje</Label>
-                <Textarea
-                  id="mensaje"
-                  name="mensaje"
-                  value={formData.mensaje}
-                  onChange={handleChange}
-                  required
-                  placeholder="Cuéntanos sobre tu proyecto..."
-                  rows={6}
-                />
-              </div>
-
-              <Button type="submit" className="w-full" disabled={isSubmitting}>
+              <Button
+                type="submit"
+                className="w-full flex justify-center items-center gap-2"
+                disabled={isSubmitting}
+              >
                 {isSubmitting ? "Enviando..." : "Enviar mensaje"}
-                <Send className="ml-2 h-4 w-4" />
+                <Send className="h-5 w-5" />
               </Button>
 
               {submitMessage && (
-                <p className="text-sm text-accent font-medium text-center">
+                <p className="text-center text-green-600 dark:text-green-400 font-medium mt-2">
                   {submitMessage}
                 </p>
               )}
             </form>
           </div>
 
-          {/* Información */}
+          {/* Información de contacto */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-2xl font-bold mb-6">
+              <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
                 Información de contacto
               </h2>
-              <p className="text-muted-foreground mb-8">
-                Estamos aquí para responder tus preguntas y ayudarte a dar vida
-                a tu proyecto digital.
-              </p>
             </div>
 
-            <div className="space-y-6">
-              {/* <Card>
-                <CardContent className="p-6 flex gap-4">
-                  <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Mail className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Email</h3>
-                    <a
-                      href="mailto:contacto@devagency.com"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      contacto@devagency.com
-                    </a>
-                  </div>
-                </CardContent>
-              </Card> */}
-
-              <Card>
-                <CardContent className="p-6 flex gap-4 ">
-                  <div className="h-12 w-12 rounded-lg bg-accent/10 flex items-center justify-center">
-                    <Phone className="h-6 w-6 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Teléfono</h3>
-                    <a
-                      href="tel:+34123456789"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      2284656640
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+            <Card className="border border-gray-200 dark:border-gray-700 shadow-sm rounded-xl">
+              <CardContent className="p-6 flex items-center gap-4">
+                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Phone className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1 text-gray-900 dark:text-white">
+                    Teléfono
+                  </h3>
+                  <a
+                    href="tel:+34123456789"
+                    className="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
+                  >
+                    2284656640
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>

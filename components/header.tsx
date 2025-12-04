@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Logo from "./ui/logo";
+import Image from "next/image";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,8 +14,14 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            {/* <div className="h-8 w-8 rounded-lg bg-primary" /> */}
+        <Link href="/" className="flex items-center space-x-2">
+            {/* <Image
+              src="/logo.svg"
+              alt="Logo"
+              width={40}
+              height={40}
+              priority
+            /> */}
             <Logo/>
           </Link>
 

@@ -1,9 +1,7 @@
-"use client"
-
-import { MessageCircle } from "lucide-react"
+"use client";
 
 export default function WhatsAppButton() {
-  const phone = "5492284656640" // <-- tu número
+  const phone = "5492284656640"; // tu número
 
   return (
     <a
@@ -11,24 +9,26 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       className="
-        fixed
-        bottom-6
-        right-6
-        bg-green-500
-        hover:bg-green-600
+        fixed bottom-6 right-6
+        bg-green-500 hover:bg-green-600
         text-white
-        rounded-full
-        p-4
+        rounded-full p-4
         shadow-lg
-        flex
-        items-center
-        justify-center
-        transition-transform
-        hover:scale-110
+        flex items-center justify-center
+        transition-transform hover:scale-110
         z-50
       "
     >
-      <MessageCircle className="h-7 w-7" />
+      {/* Icono oficial de WhatsApp */}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className="h-7 w-7"
+      >
+        <path d="M20.52 3.48A11.874 11.874 0 0012 0C5.372 0 0 5.372 0 12c0 2.113.55 4.084 1.52 5.836L0 24l6.41-1.485A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12 0-3.189-1.244-6.19-3.48-8.52zM12 22.08c-2.016 0-3.897-.615-5.46-1.65l-.392-.23-3.8.88.87-3.696-.254-.402A9.962 9.962 0 012.04 12C2.04 6.476 6.476 2.04 12 2.04c2.676 0 5.188 1.04 7.08 2.92 1.888 1.892 2.92 4.404 2.92 7.08 0 5.524-4.436 9.96-9.96 9.96z" />
+        <path d="M17.6 14.54c-.29-.145-1.72-.85-1.98-.945-.26-.092-.45-.145-.64.146-.188.292-.73.945-.894 1.14-.164.194-.33.218-.62.073-.29-.145-1.22-.45-2.33-1.437-.863-.768-1.445-1.72-1.615-2.012-.164-.292-.018-.45.127-.595.13-.13.292-.33.438-.494.145-.164.194-.292.29-.486.098-.194.05-.364-.025-.508-.073-.145-.64-1.544-.88-2.118-.23-.555-.465-.48-.64-.49l-.546-.01c-.188 0-.494.07-.753.33s-1.008.983-1.008 2.398c0 1.416 1.03 2.783 1.172 2.974.145.194 2.03 3.102 4.918 4.352.688.297 1.223.474 1.64.606.688.218 1.315.187 1.81.114.553-.08 1.72-.702 1.964-1.38.244-.677.244-1.257.17-1.38-.073-.122-.264-.194-.553-.34z" />
+      </svg>
     </a>
-  )
+  );
 }
