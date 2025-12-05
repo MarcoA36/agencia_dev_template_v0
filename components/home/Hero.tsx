@@ -16,7 +16,7 @@ export default function HeroSection() {
       />
 
       {/* Overlay profesional */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/70 to-black/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 to-black/80" />
 
 
       <div className="container relative mx-auto px-6 z-10 text-center max-w-3xl space-y-10">

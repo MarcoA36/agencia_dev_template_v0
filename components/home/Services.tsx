@@ -223,95 +223,112 @@ export default function ServicesSection() {
   ];
 
   return (
+<section id="servicios" className="py-32 bg-white">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
 
-<section
-  id="servicios"
-  className="py-32 md:py-40 bg-black/10 relative overflow-hidden"
->
-  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-20">
-      <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-black">
-        Impulsa tu negocio con nuestros servicios
-      </h2>
-      <p className="text-lg md:text-xl text-black/70 max-w-2xl mx-auto leading-relaxed">
-        Sitios web que convierten, sistemas a medida que optimizan procesos y
-        aplicaciones móviles que fidelizan a tus clientes.
-      </p>
+    {/* ----- SERVICIO 1: DESARROLLO WEB ----- */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* Imagen */}
+      <div>
+        <img
+          src="/webs2.png"
+          alt="Desarrollo de páginas web"
+          className="w-full max-w-lg mx-auto"
+        />
+      </div>
+
+      {/* Texto */}
+      <div>
+        <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6">
+         Páginas Web
+        </h2>
+
+        <p className="text-lg text-black/70 leading-relaxed mb-6">
+          Creamos sitios web modernos, rápidos, escalables y orientados a la conversión.
+          Tu página será una herramienta real para atraer clientes y posicionarte en internet.
+        </p>
+
+        <h3 className="text-primary font-semibold text-xl mb-4">
+          — ¿Qué incluye el desarrollo web?
+        </h3>
+
+        <ul className="space-y-3">
+          <li className="flex gap-3">
+            <span className="h-2 w-2 mt-2 bg-primary rounded-full"></span>
+            <p className="text-black/80">Diseño totalmente personalizado y adaptable a tu negocio.</p>
+          </li>
+
+          <li className="flex gap-3">
+            <span className="h-2 w-2 mt-2 bg-primary rounded-full"></span>
+            <p className="text-black/80">Optimización SEO para aparecer en Google.</p>
+          </li>
+
+          <li className="flex gap-3">
+            <span className="h-2 w-2 mt-2 bg-primary rounded-full"></span>
+            <p className="text-black/80">Velocidad optimizada y experiencia profesional.</p>
+          </li>
+
+          <li className="flex gap-3">
+            <span className="h-2 w-2 mt-2 bg-primary rounded-full"></span>
+            <p className="text-black/80">Implementación de formularios, catálogos, secciones y más.</p>
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-      {services.map((service, index) => {
-        const Icon = service.icon;
-        return (
-          <Card
-            key={index}
-            className="
-              border border-white/10 
-              bg-black/60
-              hover:border-primary/70
-              hover:shadow-lg
-              transition-border transition-shadow duration-200
-              p-6 flex flex-col justify-between 
-              rounded-2xl
-            "
-          >
-            <CardHeader className="text-center pb-2">
-              <div
-                className="
-                  h-14 w-14 mx-auto mb-4 rounded-xl 
-                  bg-white/50 flex items-center justify-center
-                  border border-primary/20
-                "
-              >
-                <Icon className="h-7 w-7 text-primary" />
-              </div>
+    {/* ----- SERVICIO 2: DESARROLLO DE SISTEMAS ----- */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* Texto */}
+      <div className="md:order-2">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6">
+          Sistemas de gestión y herramientas
+        </h2>
 
-              <CardTitle className="text-2xl font-bold text-white tracking-tight">
-                {service.title}
-              </CardTitle>
-            </CardHeader>
+        <p className="text-lg text-black/70 leading-relaxed mb-6">
+          Automatizamos procesos, creamos plataformas internas, paneles de administración,
+          sistemas de control y soluciones personalizadas para tu negocio.
+        </p>
 
-            <CardContent className="space-y-6">
-              <p className="text-white/80 text-base leading-relaxed min-h-[80px]">
-                {service.description}
-              </p>
+        <h3 className="text-primary font-semibold text-xl mb-4">
+          — ¿Qué tipo de sistemas desarrollamos?
+        </h3>
 
-              <div className="flex flex-wrap gap-2">
-                {service.benefits.slice(0, 3).map((b, i) => (
-                  <span
-                    key={i}
-                    className="
-                      px-3 py-1 rounded-full text-sm 
-                      bg-white/10 text-white/90 
-                      border border-white/20
-                    "
-                  >
-                    {b}
-                  </span>
-                ))}
-              </div>
+        <ul className="space-y-3">
+          <li className="flex gap-3">
+            <span className="h-2 w-2 mt-2 bg-primary rounded-full"></span>
+            <p className="text-black/80">Sistemas de gestión: clientes, productos, ventas, inventarios.</p>
+          </li>
 
-              <div className="pt-4">
-                <a
-                  href="#contacto"
-                  className="
-                    block w-full text-center
-                    bg-primary text-white font-semibold
-                    py-3 rounded-lg
-                    hover:bg-primary/90 transition-colors
-                    text-base
-                  "
-                >
-                  Consultar servicio
-                </a>
-              </div>
-            </CardContent>
-          </Card>
-        );
-      })}
+          <li className="flex gap-3">
+            <span className="h-2 w-2 mt-2 bg-primary rounded-full"></span>
+            <p className="text-black/80">Plataformas web internas para tu empresa.</p>
+          </li>
+
+          <li className="flex gap-3">
+            <span className="h-2 w-2 mt-2 bg-primary rounded-full"></span>
+            <p className="text-black/80">Apps móviles conectadas a tu sistema.</p>
+          </li>
+
+          <li className="flex gap-3">
+            <span className="h-2 w-2 mt-2 bg-primary rounded-full"></span>
+            <p className="text-black/80">Automatización de tareas y optimización de procesos.</p>
+          </li>
+        </ul>
+      </div>
+
+      {/* Imagen */}
+      <div className="md:order-1">
+        <img
+          src="/imagen-grafico.jpg"
+          alt="Desarrollo de sistemas"
+          className="w-full max-w-lg mx-auto"
+        />
+      </div>
     </div>
+
   </div>
 </section>
+
 
 
   );
