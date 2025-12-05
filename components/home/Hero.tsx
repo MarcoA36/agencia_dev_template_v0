@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function HeroSection() {
@@ -33,7 +32,7 @@ export default function HeroSection() {
   <div className="flex flex-col sm:flex-row gap-4 justify-center">
     <Link href="#contacto">
       <Button size="lg" className="w-full sm:w-auto">
-        Solicitar presupuesto <ArrowRight className="ml-2 h-4 w-4" />
+        Solicitar presupuesto
       </Button>
     </Link>
 
