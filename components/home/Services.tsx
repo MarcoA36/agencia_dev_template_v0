@@ -82,7 +82,6 @@
 //   ];
 //   return (
 //     <section id="servicios" className="py-32 md:py-40 bg-muted/40 relative overflow-hidden">
-      
 
 //       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
 //         <div className="text-center mb-20">
@@ -180,23 +179,6 @@
 //   );
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code, Smartphone, Settings } from "lucide-react";
 
@@ -208,7 +190,7 @@ export default function ServicesSection() {
       description:
         "Creamos sitios web modernos y responsivos que no solo se ven bien, sino que convierten visitantes en clientes. Cada proyecto se desarrolla pensando en la experiencia del usuario, velocidad y SEO.",
       benefits: [
-        "Diseño responsive adaptado a todos los dispositivos",
+        "Diseño adaptado a todos los dispositivos",
         "Optimización de velocidad y rendimiento",
         "SEO integrado desde el inicio",
         "Experiencia de usuario optimizada",
@@ -220,7 +202,7 @@ export default function ServicesSection() {
       description:
         "Desarrollamos sistemas a medida para que tu negocio funcione de manera más eficiente. Automatizamos procesos, gestionamos datos y facilitamos la toma de decisiones.",
       benefits: [
-        "Sistemas 100% personalizados según tus necesidades",
+        "Sistemas 100% personalizados",
         "Automatización de procesos repetitivos",
         "Integración con herramientas existentes",
         "Escalabilidad para crecer sin límites",
@@ -241,47 +223,296 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="servicios" className="py-32 md:py-40 bg-muted/40 relative overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-balance leading-tight">
-            Impulsa tu negocio con nuestras servicios
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Sitios web que convierten, sistemas a medida que optimizan procesos y aplicaciones móviles que fidelizan a tus clientes.
-          </p>
-        </div>
+  //   <section
+  //     id="servicios"
+  //     className="py-32 md:py-40 bg-muted/40 relative overflow-hidden"
+  //   >
+  //     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+  //       <div className="text-center mb-20">
+  //         <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-balance leading-tight">
+  //           Impulsa tu negocio con nuestras servicios
+  //         </h2>
+  //         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+  //           Sitios web que convierten, sistemas a medida que optimizan procesos
+  //           y aplicaciones móviles que fidelizan a tus clientes.
+  //         </p>
+  //       </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <Card
-                key={index}
-                className="border-2 border-transparent bg-card/80 backdrop-blur-sm hover:border-primary hover:shadow-xl transition-all duration-300"
+  //       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+  //         {services.map((service, index) => {
+  //           const Icon = service.icon;
+  //           return (
+  //             // <Card
+  //             //   key={index}
+  //             //   className={`
+  //             //     border border-border bg-black/50
+  //             //     hover:shadow-lg hover:border-primary
+  //             //     transition-shadow duration-300 text-center
+  //             //   `}
+  //             // >
+  //             //   <CardHeader>
+  //             //     <div className="h-14 w-14 rounded-xl bg-black/10 flex items-center justify-center mb-4">
+  //             //       <Icon className="h-7 w-7 text-white" />
+  //             //     </div>
+  //             //     <CardTitle className="text-2xl font-semibold text-white">
+  //             //       {service.title}
+  //             //     </CardTitle>
+  //             //   </CardHeader>
+
+  //             //   <CardContent className="space-y-4">
+  //             //     <p className="text-white/80 leading-relaxed">
+  //             //       {service.description}
+  //             //     </p>
+
+  //             //     <ul className="space-y-2">
+  //             //       {service.benefits.map((benefit, idx) => (
+  //             //         <li key={idx} className="flex items-start gap-2 text-sm">
+  //             //           <div className="h-1.5 w-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
+  //             //           <span className="text-white">{benefit}</span>
+  //             //         </li>
+  //             //       ))}
+  //             //     </ul>
+  //             //   </CardContent>
+  //             // </Card>
+  //             <Card
+  //               key={index}
+  //               className="
+  //   border border-white/10 bg-black/40 backdrop-blur-sm
+  //   hover:border-primary/60 transition
+  //   flex flex-col justify-between
+  // "
+  //             >
+  //               <CardHeader className="text-center">
+  //                 {/* Icono minimalista y más chico */}
+  //                 <div className="h-12 w-12 mx-auto mb-3 rounded-xl bg-white/5 flex items-center justify-center">
+  //                   <Icon className="h-6 w-6 text-white/80" />
+  //                 </div>
+
+  //                 <CardTitle className="text-xl font-semibold text-white">
+  //                   {service.title}
+  //                 </CardTitle>
+  //               </CardHeader>
+
+  //               <CardContent className="flex flex-col gap-4">
+  //                 {/* Descripción corta */}
+  //                 <p className="text-white/70 text-sm leading-relaxed min-h-[60px]">
+  //                   {service.description}
+  //                 </p>
+
+  //                 {/* Chips en vez de listas largas */}
+  //                 <div className="flex flex-wrap gap-2 mt-2">
+  //                   {service.benefits.slice(0, 3).map((b, i) => (
+  //                     <span
+  //                       key={i}
+  //                       className="
+  //           px-3 py-1 rounded-full 
+  //           bg-white/5 text-white/80 text-xs border border-white/10
+  //         "
+  //                     >
+  //                       {b}
+  //                     </span>
+  //                   ))}
+  //                 </div>
+
+  //                 {/* CTA discreto */}
+  //                 <div className="pt-4">
+  //                   <a
+  //                     href="#contacto"
+  //                     className="
+  //         block w-full text-center 
+  //         bg-primary/80 hover:bg-primary 
+  //         text-black font-medium 
+  //         py-2 rounded-lg transition
+  //       "
+  //                   >
+  //                     Consultar servicio
+  //                   </a>
+  //                 </div>
+  //               </CardContent>
+  //             </Card>
+  //           );
+  //         })}
+  //       </div>
+  //     </div>
+  //   </section>
+//   <section
+//   id="servicios"
+//   className="py-32 md:py-40 bg-black/90 relative overflow-hidden"
+// >
+//   <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+//     <div className="text-center mb-20">
+//       <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-white">
+//         Impulsa tu negocio con nuestros servicios
+//       </h2>
+//       <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+//         Sitios web que convierten, sistemas a medida que optimizan procesos y
+//         aplicaciones móviles que fidelizan a tus clientes.
+//       </p>
+//     </div>
+
+//     <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+//       {services.map((service, index) => {
+//         const Icon = service.icon;
+//         return (
+//           <Card
+//             key={index}
+//             className="
+//               border border-white/10 bg-black/50 backdrop-blur-lg 
+//               hover:border-primary/70 hover:shadow-xl 
+//               transition-all duration-300 
+//               p-6 flex flex-col justify-between rounded-2xl
+//             "
+//           >
+//             {/* Header */}
+//             <CardHeader className="text-center pb-2">
+//               <div
+//                 className="
+//                   h-14 w-14 mx-auto mb-4 rounded-xl 
+//                   bg-primary/10 flex items-center justify-center
+//                   border border-primary/20
+//                 "
+//               >
+//                 <Icon className="h-7 w-7 text-primary" />
+//               </div>
+
+//               <CardTitle className="text-2xl font-bold text-white tracking-tight">
+//                 {service.title}
+//               </CardTitle>
+//             </CardHeader>
+
+//             {/* Content */}
+//             <CardContent className="space-y-6">
+//               <p className="text-white/80 text-base leading-relaxed min-h-[80px]">
+//                 {service.description}
+//               </p>
+
+//               {/* Chips */}
+//               <div className="flex flex-wrap gap-2">
+//                 {service.benefits.slice(0, 3).map((b, i) => (
+//                   <span
+//                     key={i}
+//                     className="
+//                       px-3 py-1 rounded-full text-sm 
+//                       bg-white/10 text-white/90 
+//                       border border-white/20
+//                     "
+//                   >
+//                     {b}
+//                   </span>
+//                 ))}
+//               </div>
+
+//               {/* CTA */}
+//               <div className="pt-4">
+//                 <a
+//                   href="#contacto"
+//                   className="
+//                     block w-full text-center
+//                     bg-primary text-white font-semibold
+//                     py-3 rounded-lg
+//                     hover:bg-primary/90 transition
+//                     text-base
+//                   "
+//                 >
+//                   Consultar servicio
+//                 </a>
+//               </div>
+//             </CardContent>
+//           </Card>
+//         );
+//       })}
+//     </div>
+//   </div>
+// </section>
+<section
+  id="servicios"
+  className="py-32 md:py-40 bg-black/10 relative overflow-hidden"
+>
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-20">
+      <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-black">
+        Impulsa tu negocio con nuestros servicios
+      </h2>
+      <p className="text-lg md:text-xl text-black/70 max-w-2xl mx-auto leading-relaxed">
+        Sitios web que convierten, sistemas a medida que optimizan procesos y
+        aplicaciones móviles que fidelizan a tus clientes.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      {services.map((service, index) => {
+        const Icon = service.icon;
+        return (
+          <Card
+            key={index}
+            className="
+              border border-white/10 
+              bg-black/60
+              hover:border-primary/70
+              hover:shadow-lg
+              transition-border transition-shadow duration-200
+              p-6 flex flex-col justify-between 
+              rounded-2xl
+            "
+          >
+            <CardHeader className="text-center pb-2">
+              <div
+                className="
+                  h-14 w-14 mx-auto mb-4 rounded-xl 
+                  bg-white/50 flex items-center justify-center
+                  border border-primary/20
+                "
               >
-                <CardHeader>
-                  <div className="h-14 w-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <Icon className="h-7 w-7 text-primary" />
-                  </div>
-                  <CardTitle className="text-2xl font-semibold">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-sm">
-                        <div className="h-1.5 w-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
-                        <span className="text-muted-foreground">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
-      </div>
-    </section>
+                <Icon className="h-7 w-7 text-primary" />
+              </div>
+
+              <CardTitle className="text-2xl font-bold text-white tracking-tight">
+                {service.title}
+              </CardTitle>
+            </CardHeader>
+
+            <CardContent className="space-y-6">
+              <p className="text-white/80 text-base leading-relaxed min-h-[80px]">
+                {service.description}
+              </p>
+
+              <div className="flex flex-wrap gap-2">
+                {service.benefits.slice(0, 3).map((b, i) => (
+                  <span
+                    key={i}
+                    className="
+                      px-3 py-1 rounded-full text-sm 
+                      bg-white/10 text-white/90 
+                      border border-white/20
+                    "
+                  >
+                    {b}
+                  </span>
+                ))}
+              </div>
+
+              <div className="pt-4">
+                <a
+                  href="#contacto"
+                  className="
+                    block w-full text-center
+                    bg-primary text-white font-semibold
+                    py-3 rounded-lg
+                    hover:bg-primary/90 transition-colors
+                    text-base
+                  "
+                >
+                  Consultar servicio
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+
   );
 }
