@@ -1,6 +1,7 @@
 export default function ServicesSection() {
   const services = [
     {
+      sectionTitle: "Impulsa tu presencia online",
       title: "Páginas Web",
       description:
         "Creamos sitios web modernos, rápidos, escalables y orientados a la conversión. Tu página será una herramienta real para atraer clientes y posicionarte en internet.",
@@ -15,6 +16,7 @@ export default function ServicesSection() {
     },
 
     {
+      sectionTitle: "Mejora la gestión de tu negocio",
       title: "Sistemas de gestión y herramientas",
       description:
         "Automatizamos procesos, creamos plataformas internas, paneles de administración, sistemas de control y soluciones personalizadas para tu negocio.",
@@ -32,22 +34,22 @@ export default function ServicesSection() {
   return (
     <section id="servicios" className="py-32 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
-      <div className="text-center max-w-3xl mx-auto mb-20">
-  <h2 className="text-5xl font-extrabold text-black/80">
-    Impulsa tu presencia online con nuestros servicios
+        <div className="text-center max-w-4xl mx-auto mb-20 p-4 bg-primary/10 rounded-2xl">
+  <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-black">
+    Impulsa tu <span className="text-primary">presencia online</span> y mejora la 
+    <span className="text-primary"> gestión de tu negocio</span>
   </h2>
 </div>
-
 
         {services.map((service, index) => (
           <div
             key={index}
             className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
           >
-            {/* Imagen — alterna izquierda/derecha */}
+           
             <div
               className={`
-            flex lg:justify-center
+            flex justify-center
             ${index % 2 === 1 ? "lg:order-2" : ""}
           `}
             >
@@ -60,8 +62,7 @@ export default function ServicesSection() {
               </div>
             </div>
 
-            {/* Texto */}
-            <div className="flex lg:justify-center">
+            <div className="flex justify-center">
               <div className="max-w-[520px] w-full text-center lg:text-left">
                 <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6">
                   {service.title}
