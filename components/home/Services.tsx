@@ -34,19 +34,20 @@ export default function ServicesSection() {
   return (
     <section id="servicios" className="py-32 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
-        <div className="text-center max-w-4xl mx-auto mb-20 p-4 bg-primary/10 rounded-2xl">
-  <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-black">
-    Impulsa tu <span className="text-primary">presencia online</span> y mejora la 
-    <span className="text-primary"> gestión de tu negocio</span>
-  </h2>
-</div>
+        
+        <div className="text-center mx-auto mb-20 p-4 bg-primary/10 rounded-2xl">
+          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-black">
+            Impulsa la <span className="text-primary">presencia online</span> <br /> y
+            mejora la
+            <span className="text-primary"> gestión</span> de tu negocio
+          </h2>
+        </div>
 
         {services.map((service, index) => (
           <div
             key={index}
             className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
           >
-           
             <div
               className={`
             flex justify-center
@@ -79,7 +80,7 @@ export default function ServicesSection() {
                 <ul className="space-y-3">
                   {service.items.map((item, i) => (
                     <li key={i} className="flex gap-3">
-                      <span className="h-2 w-2 mt-2 bg-primary rounded-full"></span>
+                      {/* <span className="h-2 w-2 mt-2 bg-primary rounded-full"></span> */}
                       <p className="text-black/80">{item}</p>
                     </li>
                   ))}
