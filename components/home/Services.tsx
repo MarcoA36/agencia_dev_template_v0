@@ -29,6 +29,21 @@ export default function ServicesSection() {
       ],
       image: "/imagen-grafico.jpg",
     },
+
+    // {
+    //   sectionTitle: "Lleva tu negocio al bolsillo de tus clientes",
+    //   title: "Aplicaciones móviles",
+    //   description:
+    //     "Desarrollamos apps móviles rápidas, modernas y conectadas a tu sistema o sitio web. Soluciones ideales para expandir tu alcance y mejorar la experiencia del usuario.",
+    //   subtitle: "— ¿Qué podemos desarrollar?",
+    //   items: [
+    //     "Apps de pedidos, reservas o turnos.",
+    //     "Apps internas para empleados o logística.",
+    //     "Aplicaciones de seguimiento en tiempo real.",
+    //     "Integración con APIs, notificaciones push y más.",
+    //   ],
+    //   image: "/app-movil.jpg",
+    // },
   ];
 
   return (
