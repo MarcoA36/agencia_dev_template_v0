@@ -1,3 +1,5 @@
+import ServiceCard from "../ui/card-row";
+
 export default function ServicesSection() {
   const services = [
     {
@@ -30,79 +32,45 @@ export default function ServicesSection() {
       image: "/imagen-grafico.jpg",
     },
 
-    // {
-    //   sectionTitle: "Lleva tu negocio al bolsillo de tus clientes",
-    //   title: "Aplicaciones móviles",
-    //   description:
-    //     "Desarrollamos apps móviles rápidas, modernas y conectadas a tu sistema o sitio web. Soluciones ideales para expandir tu alcance y mejorar la experiencia del usuario.",
-    //   subtitle: "— ¿Qué podemos desarrollar?",
-    //   items: [
-    //     "Apps de pedidos, reservas o turnos.",
-    //     "Apps internas para empleados o logística.",
-    //     "Aplicaciones de seguimiento en tiempo real.",
-    //     "Integración con APIs, notificaciones push y más.",
-    //   ],
-    //   image: "/app-movil.jpg",
-    // },
+    {
+      sectionTitle: "Lleva tu negocio al bolsillo de tus clientes",
+      title: "Aplicaciones móviles",
+      description:
+        "Desarrollamos apps móviles rápidas, modernas y conectadas a tu sistema o sitio web. Soluciones ideales para expandir tu alcance y mejorar la experiencia del usuario.",
+      subtitle: "— ¿Qué podemos desarrollar?",
+      items: [
+        "Apps de pedidos, reservas o turnos.",
+        "Apps internas para empleados o logística.",
+        "Aplicaciones de seguimiento en tiempo real.",
+        "Integración con APIs, notificaciones push y más.",
+      ],
+      image: "/app-movil2.png",
+    },
   ];
 
   return (
     <section id="servicios" className="py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
-        
         <div className="text-center mx-auto mb-20 p-4 bg-primary/10 rounded-2xl">
           <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-black">
-            Mejora la <span className="text-primary">presencia online</span> <br /> y
-            <span className="text-primary"> gestión</span> de tu negocio
+            Mejora la <span className="text-primary">presencia online</span>{" "}
+            <br /> y<span className="text-primary"> gestión</span> de tu negocio
           </h2>
         </div>
-
         {services.map((service, index) => (
-          <div
+          <ServiceCard
             key={index}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
-          >
-            <div
-              className={`
-            flex justify-center
-            ${index % 2 === 1 ? "lg:order-2" : ""}
-          `}
-            >
-              <div className="max-w-[520px] w-full">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
-
-            <div className="flex justify-center">
-              <div className="max-w-[520px] w-full text-center lg:text-left">
-                <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6">
-                  {service.title}
-                </h2>
-
-                <p className="text-lg text-black/70 leading-relaxed mb-6">
-                  {service.description}
-                </p>
-
-                <h3 className="text-primary font-semibold text-xl mb-4">
-                  {service.subtitle}
-                </h3>
-
-                <ul className="space-y-3">
-                  {service.items.map((item, i) => (
-                    <li key={i} className="flex gap-3">
-                      {/* <span className="h-2 w-2 mt-2 bg-primary rounded-full"></span> */}
-                      <p className="text-black/80">{item}</p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
+            service={service}
+            reverse={index % 2 === 1}
+          />
         ))}
+   
+       {/* <div className="text-center mx-auto mb-20 p-4 bg-primary/10 rounded-2xl">
+          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-black">
+            Mejora la <span className="text-primary">presencia online</span>{" "}
+            <br /> y<span className="text-primary"> gestión</span> de tu negocio
+          </h2>
+        </div> */}
       </div>
     </section>
   );

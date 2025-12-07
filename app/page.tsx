@@ -1,11 +1,11 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import HeroSection from "@/components/home/Hero";
-import ServicesSection from "@/components/home/Services";
 import ValuesSection from "@/components/home/Values";
 import CTASection from "@/components/home/Cta";
 import ContactSection from "@/components/home/Contact";
 import WhatsAppButton from "@/components/WhatsappButon";
+import ServicesSection from "@/components/home/Services";
 
 export default function HomePage() {
   return (

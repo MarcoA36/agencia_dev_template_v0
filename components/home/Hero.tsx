@@ -67,6 +67,8 @@ export default function HeroSection() {
       {/* Imagen de fondo */}
       <Image
         src="/sistemas-full.webp"
+        // src="/digitization.jpg"
+        // src="/webs2.png"
         alt="Fondo"
         fill
         priority
@@ -78,7 +80,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/70 to-black/40" />
 
       {/* Contenido */}
-      <div className="container relative mx-auto px-6 z-10 text-center max-w-3xl space-y-10">
+      <div className="container relative mx-auto p-6 z-10 text-center max-w-3xl space-y-10 bg-black/10 rounded-2xl">
 
         <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight">
           Soluciones <span className="text-primary">Digitales</span>  
@@ -88,7 +90,7 @@ export default function HeroSection() {
 
         <h3 className="text-2xl md:text-3xl text-white/90 leading-relaxed">
           Sitios y sistemas web diseñados para impulsar  
-         tu emprendimiento.
+         tu emprendimiento
         </h3>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
