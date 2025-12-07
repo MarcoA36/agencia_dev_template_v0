@@ -95,7 +95,7 @@ export default function HeroSection() {
           <Link href="#contacto">
             <Button
               size="lg"
-              className="w-full sm:w-auto px-10 py-6 text-lg rounded-xl"
+              className="w-full sm:w-auto px-10 py-6 text-lg rounded-xl cursor-pointer"
             >
               Solicitar presupuesto
             </Button>
@@ -106,7 +106,7 @@ export default function HeroSection() {
               size="lg"
               variant="outline"
               className="
-                w-full sm:w-auto px-10 py-6 text-lg rounded-xl
+                w-full sm:w-auto px-10 py-6 text-lg rounded-xl cursor-pointer
                 border-white/60 text-black
                 hover:bg-primary hover:text-white hover:border-primary
               "

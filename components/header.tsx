@@ -52,7 +52,7 @@ export function Header() {
               Blog
             </Link> */}
             <Link href="#contacto">
-              <Button>Contacto</Button>
+              <Button className="transition-colors cursor-pointer">Contacto</Button>
             </Link>
           </nav>
 

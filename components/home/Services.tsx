@@ -47,13 +47,12 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="servicios" className="py-32 bg-white">
+    <section id="servicios" className="py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
         
         <div className="text-center mx-auto mb-20 p-4 bg-primary/10 rounded-2xl">
           <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-black">
-            Impulsa la <span className="text-primary">presencia online</span> <br /> y
-            mejora la
+            Mejora la <span className="text-primary">presencia online</span> <br /> y
             <span className="text-primary"> gestión</span> de tu negocio
           </h2>
         </div>
