@@ -14,7 +14,7 @@ export default function ServicesSection() {
         "Velocidad optimizada y experiencia profesional.",
         "Implementación de formularios, catálogos, secciones y más.",
       ],
-      image: "/webs3.jpg",
+      image: "/webs2.png",
       links: [
         { label: "Ver más", href: "/sitiosweb" },
       ],
@@ -57,10 +57,10 @@ export default function ServicesSection() {
     },
   ];
   return (
-    <section id="servicios" className="py-24 bg-white">
+    <section id="servicios" className="py-5 lg:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
         {/* Título principal */}
-        <div className="text-center mx-auto mb-20 p-4 bg-primary/10 rounded-2xl">
+        <div className="text-center mx-auto mb-5 lg:mb-15 p-4 bg-primary/10 rounded-2xl">
           <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-black">
             Mejora la <span className="text-primary">presencia online</span>{" "}
             <br /> y<span className="text-primary"> gestión</span> de tu negocio

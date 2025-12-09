@@ -125,7 +125,7 @@ export default function PaginasWebPage() {
           profesional independiente, una PyME o una empresa consolidada,
           contar con presencia online te permite atraer clientes, mostrar
           tus servicios y fortalecer tu marca las 24 horas del día."
-          backgroundSrc="/webs3.jpg"
+          backgroundSrc="/webs2.png"
         />
         {/* INTRO */}
         {/* TIPOS DE PÁGINAS */}
