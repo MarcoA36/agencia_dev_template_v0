@@ -55,7 +55,7 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Contacto</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               {/* <li>contacto@devagency.com</li> */}
-              <li> 2284656640</li>
+              <li> 2284664925</li>
             </ul>
           </div>
 
@@ -96,7 +96,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
           <p>
-            &copy; {new Date().getFullYear()} DevAgency. Todos los derechos
+            &copy; {new Date().getFullYear()} ZonaWeb. Todos los derechos
             reservados.
           </p>
         </div>
