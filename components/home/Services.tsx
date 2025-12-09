@@ -51,8 +51,12 @@ export default function ServicesSection() {
         "Integración con APIs, notificaciones push y más.",
       ],
       // links: [
-      //   { label: "Ver más", href: "/sitiosweb" },
+      //   { label: "Ver más", href: "/apps" },
       // ],
+      links: [
+        { label: "Pedir presupuesto", href: "https://wa.me/5492284664925?text=Hola,%20quiero%20pedir%20presupuesto%20para%20una%20app.%20Gracias!" },
+      ],
+      
       image: "/app-movil2.png",
     },
   ];
