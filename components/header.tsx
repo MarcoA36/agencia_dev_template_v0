@@ -82,7 +82,7 @@ export function Header() {
             </Link>
             <Link
               // href="/nosotros"
-              href="#nosotros"
+              href="/#nosotros"
               className="block text-sm font-medium text-foreground hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >

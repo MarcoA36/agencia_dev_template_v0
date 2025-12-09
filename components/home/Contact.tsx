@@ -6,9 +6,17 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Phone, Send } from "lucide-react";
+import { MapPin, Phone, Send } from "lucide-react";
+interface ContactSectionProps {
+  title?: string;
+  subtitle?: string;
+}
 
-export default function ContactSection() {
+// export default function ContactSection() {
+  export default function ContactSection({
+    title = "Contactanos",
+    subtitle = "Rellena el formulario y nos pondremos en contacto contigo lo antes posible.",
+  }: ContactSectionProps) {
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
@@ -61,10 +69,10 @@ export default function ContactSection() {
         {/* Título */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           <h3 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight">
-            Construyamos juntos tu próximo proyecto digital
+            {title}
           </h3>
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            Rellena el formulario y nos pondremos en contacto contigo lo antes posible.
+            {subtitle}
           </p>
         </div>
 
@@ -157,7 +165,7 @@ export default function ContactSection() {
           </form>
 
           {/* Información contacto */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
               Información de contacto
             </h2>
@@ -168,15 +176,32 @@ export default function ContactSection() {
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white">
+                  {/* <h3 className="font-semibold text-gray-900 dark:text-white">
                     Teléfono
+                  </h3> */}
+                  <a
+                    href="tel:2284656640"
+                    className="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors cursor-pointer"
+                  >
+                    2284664925
+                  </a>
+                </div>
+              </CardContent>
+              <CardContent className="px-6 py-3 flex items-center gap-4">
+                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <MapPin className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  {/* <h3 className="font-semibold text-gray-900 dark:text-white">
+                   Localidad
                   </h3>
                   <a
                     href="tel:2284656640"
                     className="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors cursor-pointer"
                   >
-                    2284656640
-                  </a>
+                    2284664925
+                  </a> */}
+                  <p>Olavarría, Buenos Aires, Argentina</p>
                 </div>
               </CardContent>
             </Card>

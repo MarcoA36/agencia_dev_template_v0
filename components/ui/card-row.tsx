@@ -1,17 +1,23 @@
 export interface Service {
-    sectionTitle?: string;
-    title: string;
-    description: string;
-    subtitle: string;
-    items: string[];
-    image: string;
-  }
-  
+  sectionTitle?: string;
+  title: string;
+  description: string;
+  subtitle: string;
+  items: string[];
+  image: string;
+  links?: {
+    label: string;
+    href: string;
+  }[];
+}
+
 
 interface ServiceCardProps {
   service: Service;
   reverse?: boolean;
 }
+
+import Link from "next/link";
 
 export default function ServiceCard({ service, reverse = false }: ServiceCardProps) {
   return (
@@ -36,6 +42,7 @@ export default function ServiceCard({ service, reverse = false }: ServiceCardPro
       {/* Texto */}
       <div className="flex justify-center">
         <div className="max-w-[520px] w-full text-center lg:text-left">
+
           <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6">
             {service.title}
           </h2>
@@ -48,13 +55,29 @@ export default function ServiceCard({ service, reverse = false }: ServiceCardPro
             {service.subtitle}
           </h3>
 
-          <ul className="space-y-3">
+          <ul className="space-y-3 mb-8">
             {service.items.map((item, i) => (
               <li key={i} className="flex gap-3">
                 <p className="text-black/80">{item}</p>
               </li>
             ))}
           </ul>
+
+          {/* Enlaces elegantes */}
+          {service.links && (
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-4">
+              {service.links.map((link, i) => (
+                <Link
+                  key={i}
+                  href={link.href}
+                  className="px-4 py-2 rounded-xl border border-primary text-primary font-medium hover:bg-primary w-full text-center hover:text-white transition"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          )}
+
         </div>
       </div>
     </div>

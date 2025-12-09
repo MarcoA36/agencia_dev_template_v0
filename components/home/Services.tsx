@@ -1,7 +1,7 @@
 import ServiceCard from "../ui/card-row";
 
 export default function ServicesSection() {
-  const services = [
+   const services = [
     {
       sectionTitle: "Impulsa tu presencia online",
       title: "Páginas Web",
@@ -14,7 +14,10 @@ export default function ServicesSection() {
         "Velocidad optimizada y experiencia profesional.",
         "Implementación de formularios, catálogos, secciones y más.",
       ],
-      image: "/webs2.png",
+      image: "/webs3.jpg",
+      links: [
+        { label: "Ver más", href: "/sitiosweb" },
+      ],
     },
 
     {
@@ -28,6 +31,9 @@ export default function ServicesSection() {
         "Plataformas web internas para tu empresa.",
         "Apps móviles conectadas a tu sistema.",
         "Automatización de tareas y optimización de procesos.",
+      ],
+      links: [
+        { label: "Ver más", href: "/sistemasweb" },
       ],
       image: "/imagen-grafico.jpg",
     },
@@ -44,33 +50,31 @@ export default function ServicesSection() {
         "Aplicaciones de seguimiento en tiempo real.",
         "Integración con APIs, notificaciones push y más.",
       ],
+      // links: [
+      //   { label: "Ver más", href: "/sitiosweb" },
+      // ],
       image: "/app-movil2.png",
     },
   ];
-
   return (
     <section id="servicios" className="py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
+        {/* Título principal */}
         <div className="text-center mx-auto mb-20 p-4 bg-primary/10 rounded-2xl">
           <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-black">
             Mejora la <span className="text-primary">presencia online</span>{" "}
             <br /> y<span className="text-primary"> gestión</span> de tu negocio
           </h2>
         </div>
-        {services.map((service, index) => (
-          <ServiceCard
-            key={index}
-            service={service}
-            reverse={index % 2 === 1}
-          />
-        ))}
-   
-       {/* <div className="text-center mx-auto mb-20 p-4 bg-primary/10 rounded-2xl">
-          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-black">
-            Mejora la <span className="text-primary">presencia online</span>{" "}
-            <br /> y<span className="text-primary"> gestión</span> de tu negocio
-          </h2>
-        </div> */}
+
+        {/* PAGINAS */}
+        <ServiceCard service={services[0]} reverse={false} />
+
+        {/* SISTEMAS */}
+        <ServiceCard service={services[1]} reverse={true} />
+
+        {/* APPS */}
+        <ServiceCard service={services[2]} reverse={false} />
       </div>
     </section>
   );
