@@ -80,7 +80,7 @@ interface ContactSectionProps {
           {/* Formulario */}
           <form
             onSubmit={handleSubmit}
-            className="space-y-6 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700"
+            className="space-y-6 bg-white dark:bg-gray-800 p-4 lg:p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700"
           >
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
               Envíanos un mensaje
@@ -134,6 +134,7 @@ interface ContactSectionProps {
                   required
                   placeholder="Cuéntanos sobre tu proyecto..."
                   rows={6}
+                  className="h-30"
                 />
               </div>
             </div>

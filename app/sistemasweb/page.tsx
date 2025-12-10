@@ -126,7 +126,7 @@ export default function SistemasWeb() {
           </div>
         </section>
         <PromoSection
-          title="Si tenes un negocio o marca necesitas un sitio web"
+          title="Creamos el sitio web de tu marca o negocio"
           items={[
             "Sitio web institucional",
             "Pagina autoadministrable",
