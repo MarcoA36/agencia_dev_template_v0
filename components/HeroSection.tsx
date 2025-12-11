@@ -162,7 +162,7 @@ export default function HeroSection({
             {title}
           </h1>
 
-          <p className="text-lg md:text-2xl text-white/90 drop-shadow max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-white/90 drop-shadow max-w-3xl mx-auto">
             {subtitle}
           </p>
 
