@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import ContactSection from "@/components/home/Contact";
 import SistemasList from "@/components/secciones/SistemasList";
-import PromoSection from "@/components/ui/promo-section";
+import PromoSection from "@/components/secciones/PromoSection";
 
 export default function SistemasWeb() {
   return (
@@ -24,8 +24,9 @@ export default function SistemasWeb() {
             "Catálogo",
             "Tienda online",
           ]}
-          buttonLabel="Ver más"
+          buttonLabel="Ver sitios web"
           buttonHref="/sitiosweb"
+          imageSrc="/webs2.png"
         />
         <ContactSection />
       </main>

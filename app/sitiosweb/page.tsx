@@ -1,7 +1,7 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import HeroSection from "@/components/HeroSection";
-import PromoSection from "@/components/ui/promo-section";
+import PromoSection from "@/components/secciones/PromoSection";
 import ContactSection from "@/components/home/Contact";
 import PaginasList from "@/components/secciones/PaginasList";
 
@@ -29,8 +29,9 @@ export default function PaginasWebPage() {
             "Automatización e integraciones con APIs",
             "Sistemas internos y paneles de administración",
           ]}
-          buttonLabel="Ver mas"
+          buttonLabel="Ver sistemas"
           buttonHref="/sistemasweb"
+          imageSrc="/imagen-grafico.jpg"
         />
         <ContactSection />
       </main>

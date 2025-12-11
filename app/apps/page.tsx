@@ -1,7 +1,7 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import HeroSection from "@/components/HeroSection";
-import PromoSection from "@/components/ui/promo-section";
+import PromoSection from "@/components/secciones/PromoSection";
 import ContactSection from "@/components/home/Contact";
 import { Smartphone, Map, Bell, Layers, ShoppingCart } from "lucide-react";
 
