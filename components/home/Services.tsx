@@ -10,7 +10,7 @@ export default function ServicesSection() {
       subtitle: "— ¿Qué incluye el desarrollo web?",
       items: [
         "Diseño totalmente personalizado y adaptable a tu negocio.",
-        "Optimización SEO para aparecer en Google.",
+        "Optimización SEO.",
         "Velocidad optimizada y experiencia profesional.",
         "Implementación de formularios, catálogos, secciones y más.",
       ],
@@ -47,8 +47,6 @@ export default function ServicesSection() {
       items: [
         "Apps de pedidos, reservas o turnos.",
         "Apps internas para empleados o logística.",
-        "Aplicaciones de seguimiento en tiempo real.",
-        "Integración con APIs, notificaciones push y más.",
       ],
       // links: [
       //   { label: "Ver más", href: "/apps" },

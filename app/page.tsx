@@ -6,6 +6,10 @@ import CTASection from "@/components/home/Cta";
 import ContactSection from "@/components/home/Contact";
 import WhatsAppButton from "@/components/WhatsappButon";
 import ServicesSection from "@/components/home/Services";
+import FeatureSection from "@/components/secciones/FeaturesSection";
+import ArticleSection from "@/components/secciones/ArticleSection";
+import BusinessTypesSection from "@/components/secciones/BusinesTypeSection";
+import WebArticleSection from "@/components/secciones/WebArticleSection";
 
 export default function HomePage() {
   return (
@@ -14,10 +18,13 @@ export default function HomePage() {
 
       <main className="flex-1">
         <HeroSection />
+     
         <ServicesSection />
+{/* <BusinessTypesSection/> */}
         <ValuesSection />
         <CTASection />
-        <ContactSection/>
+
+        <ContactSection />
       </main>
 
       <Footer />

@@ -4,6 +4,9 @@ import HeroSection from "@/components/HeroSection";
 import PromoSection from "@/components/secciones/PromoSection";
 import ContactSection from "@/components/home/Contact";
 import PaginasList from "@/components/secciones/PaginasList";
+import ArticleSection from "@/components/secciones/ArticleSection";
+import BusinessTypesSection from "@/components/secciones/BusinesTypeSection";
+import WebArticleSection from "@/components/secciones/WebArticleSection";
 
 export default function PaginasWebPage() {
   return (
@@ -20,6 +23,7 @@ export default function PaginasWebPage() {
           backgroundSrc="/webs2.png"
         />
         <PaginasList />
+        <WebArticleSection />
         <PromoSection
           title="Hacé más eficiente la gestión de tu negocio"
           subtitle="Sistemas a medida que automatizan tareas, reducen errores y te permiten escalar sin límites"

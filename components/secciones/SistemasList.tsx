@@ -77,7 +77,7 @@ export default function SistemasList() {
 
               <div className="mt-auto">
                 <a
-                  href={`https://wa.me/${WhatsApp}?text=${encodeURIComponent(item.message)}`}
+                  href={`https://wa.me/${WhatsApp}?text=${encodeURIComponent( `Hola, quería más información sobre ${item.title}.`)}`}
                   target="_blank"
                   className="block"
                 >

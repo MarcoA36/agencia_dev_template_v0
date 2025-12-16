@@ -63,7 +63,7 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Síguenos</h3>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61584669910747"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Facebook"
               >
