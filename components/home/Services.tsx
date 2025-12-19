@@ -1,4 +1,5 @@
 import ServiceCard from "../ui/card-row";
+const WHATSAPP_URL = "https://wa.me/5492284664925";
 
 export default function ServicesSection() {
    const services = [
@@ -17,6 +18,10 @@ export default function ServicesSection() {
       image: "/webs2.png",
       links: [
         { label: "Ver más", href: "/sitiosweb" },
+        {
+          label: "Consultar",
+          href: `${WHATSAPP_URL}?text=Hola,%20quiero%20consultar%20por%20un%20sistema%20de%20gestión.%20Gracias!`,
+        },
       ],
     },
 
@@ -34,6 +39,10 @@ export default function ServicesSection() {
       ],
       links: [
         { label: "Ver más", href: "/sistemasweb" },
+        {
+          label: "Consultar",
+          href: `${WHATSAPP_URL}?text=Hola,%20quiero%20consultar%20por%20un%20sistema%20de%20gestión.%20Gracias!`,
+        },
       ],
       image: "/imagen-grafico.jpg",
     },
@@ -52,7 +61,10 @@ export default function ServicesSection() {
       //   { label: "Ver más", href: "/apps" },
       // ],
       links: [
-        { label: "Pedir presupuesto", href: "https://wa.me/5492284664925?text=Hola,%20quiero%20pedir%20presupuesto%20para%20una%20app.%20Gracias!" },
+        {
+          label: "Consultar",
+          href: `${WHATSAPP_URL}?text=Hola,%20quiero%20consultar%20por%20un%20sistema%20de%20gestión.%20Gracias!`,
+        },
       ],
       
       image: "/app-movil2.png",

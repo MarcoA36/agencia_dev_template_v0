@@ -65,7 +65,7 @@ export default function ServiceCard({ service, reverse = false }: ServiceCardPro
 
           {/* Enlaces elegantes */}
           {service.links && (
-            <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-4">
+            <div className="flex justify-center lg:justify-start gap-3 mt-4">
               {service.links.map((link, i) => (
                 <Link
                   key={i}

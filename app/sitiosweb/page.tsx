@@ -4,8 +4,6 @@ import HeroSection from "@/components/HeroSection";
 import PromoSection from "@/components/secciones/PromoSection";
 import ContactSection from "@/components/home/Contact";
 import PaginasList from "@/components/secciones/PaginasList";
-import ArticleSection from "@/components/secciones/ArticleSection";
-import BusinessTypesSection from "@/components/secciones/BusinesTypeSection";
 import WebArticleSection from "@/components/secciones/WebArticleSection";
 
 export default function PaginasWebPage() {
